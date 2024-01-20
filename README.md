@@ -14,7 +14,7 @@ Starting secondary namenodes [MacBook-Pro.local]
 2024-01-13 17:04:00,232 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 ```
 
-### 使用方式
+## 使用方式
 没有特殊说明的话 都是基于Intel芯片 如果使用m1 m2 m3 苹果系列的芯片可以先使用试试,如果不行的话 需要自行编译了
 找到自己对应的版本 下载并解压然后 加lib/native下的文件  复制到 $HADOOP_HOME/lib/native下即可
 
@@ -23,14 +23,23 @@ Starting secondary namenodes [MacBook-Pro.local]
 控制台没有报错 说明这个 native支持
 
 
+## 验证
+```shell
+#查看 Hadoop 支持的本地库信息：
+bin/hadoop checknative -a
+````
+如果本机支持的话 出现如下提示
+![img.png](images/img.png)
 
 ### 说明
-hadoop-2.7.3 fork from https://github.com/mingsquall/native-hadoop-library
-hadoop-2.7.7 fork from https://github.com/janlle/mac-hadoop-native-lib
-hadoop-2.8.5 fork from https://github.com/janlle/mac-hadoop-native-lib
-hadoop-2.9.2 fork from https://github.com/janlle/mac-hadoop-native-lib
-hadoop-3.1.3 fork from https://github.com/YosanHo/hadoop-native-macos
-hadoop-3.2.1 fork from https://github.com/YosanHo/hadoop-native-macos
+- hadoop-3.6.3 实际测试过,可用    其中源码的编译 有点烦躁  目前只编译了重点的部分 common 和 hdfs  yarn和 map reducer部分由于涉及到源码的改动 并未完成
+
+- hadoop-2.7.3 fork from https://github.com/mingsquall/native-hadoop-library
+- hadoop-2.7.7 fork from https://github.com/janlle/mac-hadoop-native-lib
+- hadoop-2.8.5 fork from https://github.com/janlle/mac-hadoop-native-lib
+- hadoop-2.9.2 fork from https://github.com/janlle/mac-hadoop-native-lib
+- hadoop-3.1.3 fork from https://github.com/YosanHo/hadoop-native-macos
+- hadoop-3.2.1 fork from https://github.com/YosanHo/hadoop-native-macos
 
 
 
