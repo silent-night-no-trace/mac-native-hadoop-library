@@ -32,7 +32,7 @@ bin/hadoop checknative -a
 ![img.png](images/img.png)
 
 ### 说明
-- hadoop-3.6.3 实际测试过,可用    其中源码的编译 有点烦躁  目前只编译了重点的部分 common 和 hdfs  yarn和 map reducer部分由于涉及到源码的改动 并未完成
+- hadoop-3.6.3 实际测试过,可用    其中源码的编译 有点烦躁  目前只编译了重点的部分 common hdfs mapreduce  由于涉及到源码的改动 yarn 部分 并未完成
 
 - hadoop-2.7.3 fork from https://github.com/mingsquall/native-hadoop-library
 - hadoop-2.7.7 fork from https://github.com/janlle/mac-hadoop-native-lib
